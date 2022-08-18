@@ -1,0 +1,20 @@
+{
+  "name": "baka",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "chetan chandel",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.7.6",
+    "@types/yargs": "^17.0.11",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "yargs": "^17.5.1"
+  }
+}
