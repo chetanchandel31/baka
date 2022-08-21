@@ -1,10 +1,15 @@
 {
   "name": "baka",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "dist/cli.js",
+  "bin": {
+    "baka": "./dist/cli.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsc -w",
+    "start": "node ./dist/cli.js",
+    "local": "npm i -g && baka --help"
   },
   "keywords": [],
   "author": "chetan chandel",
