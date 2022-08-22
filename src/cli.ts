@@ -1,9 +1,6 @@
 #!/usr/bin/env node
 
 import yargs from "yargs";
-import dotenv from "dotenv";
-
-dotenv.config();
 
 // `process.argv` is array of command line arguments
 // 1st arg is path to executable and 2nd arg is path to actual js file

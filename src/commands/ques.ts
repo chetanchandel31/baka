@@ -1,6 +1,7 @@
 import { exec, ExecException, ProcessEnvOptions } from "child_process";
 import path from "path";
 import { Arguments } from "yargs";
+import { config } from "../config/app-config";
 
 /** promisified exec */
 type ExecCallback = (
@@ -28,7 +29,7 @@ export const command: string = "ques";
 export const desc: string = "open ques in vscode";
 
 export const handler = async (argv: Arguments) => {
-  if (typeof process.env.PATH_TO_QUES !== "string") {
+  if (typeof config.PATH_TO_QUES !== "string") {
     return console.log("please first setup a path for `ques` directory");
   }
 
@@ -50,7 +51,7 @@ export const handler = async (argv: Arguments) => {
       }
       if (stdout) console.log(`stdout: ${stdout}`);
     },
-    options: { cwd: path.join(process.env.PATH_TO_QUES) },
+    options: { cwd: path.join(config.PATH_TO_QUES) },
   });
 
   process.stdout.write("done 🎉");
