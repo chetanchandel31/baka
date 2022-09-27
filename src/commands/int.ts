@@ -34,7 +34,7 @@ export const handler = async (argv: Arguments) => {
 
   process.stdout.write("done 🎉");
 
-  getRandomNumbers();
+  getRandomNumbers({});
 
   process.exit(0);
 };

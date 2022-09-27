@@ -1,7 +1,12 @@
-const getRandomNumbers = (): number[] => {
-  const lowerLimit = 1;
-  const upperLimit = 120;
+type GetRandomNumbersArgs = {
+  lowerLimit?: number;
+  upperLimit?: number;
+};
 
+const getRandomNumbers = ({
+  lowerLimit = 1,
+  upperLimit = 120,
+}: GetRandomNumbersArgs): number[] => {
   const randomNumbersCount = 5;
 
   let randomNumbers = [];
