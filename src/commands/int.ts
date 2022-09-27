@@ -1,6 +1,7 @@
 import path from "path";
 import { Arguments } from "yargs";
 import { config } from "../config/app-config";
+import getRandomNumbers from "../utils/getRandomNumbers";
 import { promisifiedExec } from "../utils/promisifiedExec";
 
 export const command: string = "int";
@@ -32,5 +33,8 @@ export const handler = async (argv: Arguments) => {
   process.stdout.write("✅\n");
 
   process.stdout.write("done 🎉");
+
+  getRandomNumbers();
+
   process.exit(0);
 };
