@@ -1,3 +1,5 @@
+const chalk = require("chalk");
+
 type GetRandomNumbersArgs = {
   lowerLimit?: number;
   upperLimit?: number;
@@ -22,7 +24,8 @@ const getRandomNumbers = ({
   process.stdout.write(
     `${randomNumbersCount} random numbers between ${lowerLimit} and ${upperLimit}:`
   );
-  process.stdout.write("\n" + randomNumbers.join());
+
+  process.stdout.write(chalk.cyan("\n" + randomNumbers.join()));
 
   return randomNumbers;
 };
